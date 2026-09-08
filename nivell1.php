@@ -80,13 +80,33 @@ declare(strict_types = 1);
 // echo PHP_EOL;
 // echo calculator(11, 400, "-");
 
-function counter(float $multiplier, float $toCount = 10,) {
-    $counter = 0;
-    for ($i = 0; $counter < $toCount; $i++) {
-        $counter = $counter + $multiplier;
-        if ($counter > $toCount) {$counter = $toCount;}
-        echo $counter, "\n";
+// function counter(float $multiplier, float $toCount = 10,) {
+//     $counter = 0;
+//     for ($i = 0; $counter < $toCount; $i++) {
+//         $counter = $counter + $multiplier;
+//         if ($counter > $toCount) {$counter = $toCount;}
+//         echo $counter, "\n";
+//     }
+// }
+// counter(4, 42);
+//
+function gradeCalculator(int $grade) {
+    $grau = "grau";
+    if ($grade >= 60) {
+        echo "$grau es Primera Divisio";
+        echo PHP_EOL;
+    } else if ($grade >= 45 and $grade <= 59 ) {
+        echo "$grau es Segona Divisio";
+        echo PHP_EOL;
+    } else if ($grade >= 33 and $grade <= 44 ) {
+        echo "$grau es Tercera Divisio";
+        echo PHP_EOL;
+    } else {
+        echo "L'estudiant reprova";
+        echo PHP_EOL;
     }
 }
-counter(4, 42);
+gradeCalculator(33);
+gradeCalculator(100);
+gradeCalculator(2);
 ?>
