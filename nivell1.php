@@ -26,7 +26,7 @@ declare(strict_types = 1);
 // echo strlen($holaMundoUpper), "\n";
 // echo strrev($holaMundoUpper), "\n";
 // $cursString = "Aquest es el curs de PHP";
-echo "$holaMundoUpper $cursString";
+// echo "$holaMundoUpper $cursString";
 
 $x = 10;
 $y = 90;
