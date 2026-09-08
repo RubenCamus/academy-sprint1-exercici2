@@ -28,29 +28,55 @@ declare(strict_types = 1);
 // $cursString = "Aquest es el curs de PHP";
 // echo "$holaMundoUpper $cursString";
 
-$x = 10;
-$y = 90;
-$n = 140.12;
-$m = 3.6666;
+// $x = 10;
+// $y = 90;
+// $n = 140.12;
+// $m = 3.6666;
 
-echo "x is $x y is $y";
+// echo "x is $x y is $y";
+// echo PHP_EOL;
+// echo "sum is ", $x + $y;
+// echo PHP_EOL;
+// echo "minus is ", $x - $y;
+// echo PHP_EOL;
+// echo "product is ", $x * $y;
+// echo PHP_EOL;
+// echo "modul is ", $x / $y;
+// echo PHP_EOL;
+// echo PHP_EOL;
+// echo "n is $n m is $m";
+// echo PHP_EOL;
+// echo "sum is ", $n + $m;
+// echo PHP_EOL;
+// echo "minus is ", $n - $m;
+// echo PHP_EOL;
+// echo "product is ", $n * $m;
+// echo PHP_EOL;
+// echo "modul is ", $n / $m;
+//
+function calculator(float $firstParam, float $secondParam, string $calcParam) {
+    if ($calcParam != "+" && $calcParam != "-" && $calcParam != "*" && $calcParam != "/") {
+        return "Mathematical operator is not valid";
+    }
+    if (gettype($firstParam) != "double" or gettype($secondParam) != "double") {
+        return "Not a valid number";
+    }
+    if ($calcParam == "+") {
+        return $firstParam + $secondParam;
+    }
+    if ($calcParam == "-") {
+            return $firstParam - $secondParam;
+    }
+    if ($calcParam == "*") {
+            return $firstParam * $secondParam;
+    }
+    if ($calcParam == "/") {
+            return $firstParam / $secondParam;
+    }
+}
+echo calculator(10.333, 400, "*");
 echo PHP_EOL;
-echo "sum is ", $x + $y;
+echo calculator(0, -111, "/");
 echo PHP_EOL;
-echo "minus is ", $x - $y;
-echo PHP_EOL;
-echo "product is ", $x * $y;
-echo PHP_EOL;
-echo "modul is ", $x / $y;
-echo PHP_EOL;
-echo PHP_EOL;
-echo "n is $n m is $m";
-echo PHP_EOL;
-echo "sum is ", $n + $m;
-echo PHP_EOL;
-echo "minus is ", $n - $m;
-echo PHP_EOL;
-echo "product is ", $n * $m;
-echo PHP_EOL;
-echo "modul is ", $n / $m;
+echo calculator(11, 400, "-");
 ?>
