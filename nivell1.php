@@ -54,29 +54,39 @@ declare(strict_types = 1);
 // echo PHP_EOL;
 // echo "modul is ", $n / $m;
 //
-function calculator(float $firstParam, float $secondParam, string $calcParam) {
-    if ($calcParam != "+" && $calcParam != "-" && $calcParam != "*" && $calcParam != "/") {
-        return "Mathematical operator is not valid";
-    }
-    if (gettype($firstParam) != "double" or gettype($secondParam) != "double") {
-        return "Not a valid number";
-    }
-    if ($calcParam == "+") {
-        return $firstParam + $secondParam;
-    }
-    if ($calcParam == "-") {
-            return $firstParam - $secondParam;
-    }
-    if ($calcParam == "*") {
-            return $firstParam * $secondParam;
-    }
-    if ($calcParam == "/") {
-            return $firstParam / $secondParam;
+// function calculator(float $firstParam, float $secondParam, string $calcParam) {
+//     if ($calcParam != "+" && $calcParam != "-" && $calcParam != "*" && $calcParam != "/") {
+//         return "Mathematical operator is not valid";
+//     }
+//     if (gettype($firstParam) != "double" or gettype($secondParam) != "double") {
+//         return "Not a valid number";
+//     }
+//     if ($calcParam == "+") {
+//         return $firstParam + $secondParam;
+//     }
+//     if ($calcParam == "-") {
+//             return $firstParam - $secondParam;
+//     }
+//     if ($calcParam == "*") {
+//             return $firstParam * $secondParam;
+//     }
+//     if ($calcParam == "/") {
+//             return $firstParam / $secondParam;
+//     }
+// }
+// echo calculator(10.333, 400, "*");
+// echo PHP_EOL;
+// echo calculator(0, -111, "/");
+// echo PHP_EOL;
+// echo calculator(11, 400, "-");
+
+function counter(float $multiplier, float $toCount = 10,) {
+    $counter = 0;
+    for ($i = 0; $counter < $toCount; $i++) {
+        $counter = $counter + $multiplier;
+        if ($counter > $toCount) {$counter = $toCount;}
+        echo $counter, "\n";
     }
 }
-echo calculator(10.333, 400, "*");
-echo PHP_EOL;
-echo calculator(0, -111, "/");
-echo PHP_EOL;
-echo calculator(11, 400, "-");
+counter(4, 42);
 ?>
